@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Reading Lesson Questions: Beatrix Potter</title>
+<link href="carla.css" rel="stylesheet" type="text/css" />
+<script>
+function startIt(story)
+{
+	numRows = parseInt(prompt("How many questions are there for this story?"));
+	for (var i = 0; i < numRows; i++)
+		document.getElementById('div'+i).innerHTML = ((i + 1) + ". " + (prompt("Enter question number " + (i + 1) + ":")));
+}
+	
+</script>
+</head>
+<body>
+<div id="container">
+  <img src="images/owl_reading.jpg" class="floatleft" />  
+  <h2>Carla's Classroom<br />
+  Reading Comprehension</h2>
+   <div id = "content" style="width: 700px; margin-left: auto; margin-right: auto;">
+		<h3>The Tale of Peter Rabbit by Beatrix Potter</h3>
+		<div style = "width: 300px; float: left;">
+			<p><input type="button" id="potter" value="questions" onclick="startIt('potter');" />
+			<p><span  id = "div0">Who is Peter?</span></p>
+			<p><span  id = "div1">Who is Flopsy?</span></p>
+			<p><span  id = "div2">What is the name of the farmer?</span></p>
+			<p><span  id = "div3">What did Peter want to eat after he felt sick?</span></p>
+			<p><span  id = "div4">What was Mr. McGregor planting when Peter saw him?</span></p>
+			<p><span  id = "div5">Where did Peter lose his shoes?</span></p>
+			<p><span  id = "div6">What happened when Peter ran into the gooseberry net?</span></p>
+			<p><span  id = "div7">Where did Peter try to hide?</span></p>
+			<p><span  id = "div8">What was the old mouse carrying when Peter met her?</span></p>
+			<p><span  id = "div9">What did Peter's mother give him to eat that night?</span></p>
+		</div>
+	<div style="clear:both;"></div>
+</div>
+	<div id="footer">
+		<h3>* Carla's Motto: Never miss a chance to teach -- and to learn!</h3>
+	</div>
+</div>
+</body>
+</html>
+ 

@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Carla's Classroom | Fun With Factors</title>
+<link href="carla.css" rel="stylesheet" type="text/css" />
+<!-- link to js file -->
+<script>
+function factorIt()
+{
+	//declare and initialize variables and arrays
+
+	// get number
+	
+	//outer loop goes until student gets X amt right or quits
+	while (choice == "y")
+	{
+		//clean out old information
+		
+		//pick num to factor
+		//check number
+		//check if number selected has been used
+		
+		//add number picked to used array
+		//get all factors of number
+		//clear out array from previous
+		//factor one number loop
+		while (score < 3) //keep going until 3 numbers have been factored
+		{
+			// get a factor
+			//check to see if student response is a real factor
+			//if incorrect
+			{
+				//store incorrect response
+				//keep track of number of incorrect responses
+				//alert with total incorrect responses
+			}
+			//if correct 
+			{
+				//add to factors so far
+				//display
+			}
+			//check if all factors given
+			{
+				
+			}
+			//if 5 incorrect responses
+			{
+			
+			}
+		}
+		// if score = 3
+		{
+			//check if want to progress to next level
+		}
+	}
+	function intermediate()
+	{
+		alert("nothing here so far");
+	}
+}
+</script>
+</head>
+<body>
+<div id="container">
+	<img src="images/owl_logo.jpg" class="floatleft" />  
+	<h1 id="logo"><em>Carla's Classroom</em></h1>
+	<p>&nbsp; </p><p>&nbsp; </p>
+	<div align="left">
+		<blockquote>
+		<a href="index.html"><img src="images/owl_button.jpg" />Home</a>
+        <a href="carla.html"><img src="images/carla_button.jpg" />Meet Carla </a>
+        <a href="reading.html"><img src="images/read_button.jpg" />Reading</a>
+        <a href="writing.html"><img src="images/write_button.jpg" />Writing</a>
+        <a href="math.html"><img src="images/arith_button.jpg" />Arithmetic</a><br />               
+        </blockquote>
+	</div>
+	<div id="content">
+		<p>This test will increase in difficulty as you prove you are ready for harder problems. As soon as you get 3 problems correct in Level One, you will progress to the next level.</p>
+		<p>When you begin Level One, you will be given a number between 1 and 20. You will be prompted for all the factors of that number. When you find all the factors, you will be given a new number. If you make 5 incorrect entries, you will be given a new number. </p>
+		<p><input type="button" onclick="factorIt()" value="begin the test" /> <div id = "done">&nbsp;</div></p>
+		<p>Number to factor: <div id = "factor_num">&nbsp;</div></p>
+		<p>Your factors so far: <div id = "user_factors">&nbsp;</div></p>
+		<p>Instant feedback: <div id = "result_1">&nbsp;</div></p>
+		<p>Next level:<br /><div id = "result_2">&nbsp;</div></p>
+	</div>
+	</div>
+	<div id="footer">  <h3>*Carla's Motto: Never miss a chance to teach -- and to learn!</h3>
+	</div>
+</body>
+</html>

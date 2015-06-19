@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Carla's Classroom | Progress Report Form</title>
+<link href="carla.css" rel="stylesheet" type="text/css" />
+<script>
+//create the functions to get the student's name, HW and test averages
+//create functions for attendance, arithmetic, reading, writing, total grade
+//place information in designated areas on the web page
+//create area for comments
+
+
+</script>
+</head>
+<body>
+<!-- create a form action to send the results via email -->
+<form name="progress"  enctype="text/plain">
+ <div id="container">
+  <img src="images/owl_reading.jpg" class="floatleft" />  
+  <h2 id="logo"><em>Carla's Progress Report</em></h2>
+</div><div style="clear:both;"></div>
+  <div id="content">
+<p><label>Student's Name:</label> 
+	<!-- create input box for name and call appropriate function -->
+	<p><label>Homework average:</label>
+	<!-- create input box for homework average and call appropriate function -->
+	<label>Test average:</label>
+	<!-- create input box for test average and call appropriate function -->
+	<table width = "100%">
+	<tr><td><h4>attendance</h4></td><td><h4>arithmetic</h4></td><td><h4>reading</h4></td><td><h4>writing</h4></td></tr>
+	<tr><td>
+	<!-- create radio buttons to select grade (Excellent, Satisfactory, Needs Improvement) -->
+	</td></tr>
+	</table>
+	<br /><p> <label>Overall Semester Grade:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+	<!-- create radio buttons to select letter grade: A, B, etc. --></p>
+	
+	<p><textarea name="comments" id="comments" rows="5" cols="50">Comments</textarea>
+	<input type ="button" onclick="getComments('comments')" value = "ok"></button></p>
+	
+<div><h3><u>Student Report</u><br />
+<!-- create areas for Carla's report to be displayed-->
+</div>
+ <div style="clear:both;"></div>
+<p>	<input type="reset" value="Start over"> &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value ="Submit report"></p>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Greg's Gambits | The Battleground</title>
+	<link href="greg.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function winIt()
+{
+		//initialize variables
+		var myCard1 = 0; var myCard2 = 0;
+		var myCard1Show = 0; var myCard2Show = 0;
+		var comCard1 = 0; var comCard2 = 0;
+		var myPts = 0; var comPts = 0;
+		var jqk = 0;
+		var j = "Jack"; var q = "Queen";
+		var k = "King"; var a = "Ace";
+		var startPlay = ""; var letter = "";
+		//Two cards for me and computer respectively
+		// get my cards
+			myCard1 = Math.floor(Math.random()*10 + 2);
+				if(myCard1==11) myCard1Show = "Ace";
+				else if(myCard1==10)
+				{
+					jqk = Math.floor(Math.random()*3 + 1);
+						if(jqk==1) myCard1Show = "Jack";
+						else if(jqk==2) myCard1Show = "Queen";
+						else myCard1Show = "King"
+				}
+				else myCard1Show = myCard1;
+			myCard2 = Math.floor(Math.random()*10 + 2);
+				if(myCard2==11) myCard2Show = "Ace";
+				else if(myCard2==10)
+				{
+					jqk = Math.floor(Math.random()*3 + 1);
+						if(jqk==1) myCard2Show = "Jack";
+						else if(jqk==2) myCard2Show = "Queen";
+						else myCard2Show = "King"
+				}
+				else myCard2Show = myCard2;
+			myPts = myPts + myCard1 + myCard2;
+			//get computer's cards
+			comCard1 = Math.floor(Math.random()*10 + 2);
+			comCard2 = Math.floor(Math.random()*10 + 2);
+			comPts = comPts + comCard1 + comCard2;
+		//fill HTML page
+		//document.getElementById("comPts").innerHTML = (comPts);
+		document.getElementById("myPts").innerHTML = (myPts);
+		document.getElementById("myCards").innerHTML = ("Your cards: " + myCard1Show +" and " + myCard2Show);
+		//document.getElementById("comCards").innerHTML = (" The computer's cards: ");
+		document.getElementById("winner").innerHTML = ("&nbsp;");
+		//loop repeats until troll or player get 21 points
+ 		while ((myPts < 21) && (comPts < 21)) 
+		{
+			// get start game21
+			startPlay = prompt("Do you need one more card?(yes or no)", "");
+			letter = startPlay.charAt(0);
+			if(letter == "n"||letter=="N") break;
+			// get my cards
+			myCard1 = Math.floor(Math.random()*10 + 2);
+				if(myCard1==11) myCard1Show = "Ace";
+				else if(myCard1==10)
+				{
+					jqk = Math.floor(Math.random()*3 + 1);
+						if(jqk==1) myCard1Show = "Jack";
+						else if(jqk==2) myCard1Show = "Queen";
+						else myCard1Show = "King"
+				}
+				else myCard1Show = myCard1;
+			document.getElementById("myCards").innerHTML = ("Your cards: " + myCard1Show);
+			//myCard2 = Math.floor(Math.random()*10 + 2);
+			myPts = myPts + myCard1;
+			document.getElementById("myPts").innerHTML = (myPts);
+			//get computer's cards
+			comCard1 = Math.floor(Math.random()*10 + 2);
+			//comCard2 = Math.floor(Math.random()*10 + 2);
+			comPts = comPts + comCard1;
+			
+			
+		}
+		//Show the computer points.
+		document.getElementById("comPts").innerHTML = (comPts);
+		//display the final winner
+		if((comPts > 21)&&(myPts<21))
+		document.getElementById("winner").innerHTML = ("The computer's sum is over 21, You win!");
+		if((comPts < 21)&&(myPts>21))
+		document.getElementById("winner").innerHTML = ("Your sum is over 21, Computer wins!");
+		if((comPts > 21)&&(myPts>21))
+		document.getElementById("winner").innerHTML = ("Both of sums are over 21, no one wins!");
+		if((comPts < myPts)&&(myPts<21))
+		document.getElementById("winner").innerHTML = ("You win!");
+		if((comPts < 21)&&(myPts<comPts))
+		document.getElementById("winner").innerHTML = ("The computer wins!");
+		if((comPts < 21)&&(myPts==comPts))
+		document.getElementById("winner").innerHTML = ("It si a tie and no one wins this round!");
+		
+}
+</script>
+<style type="text/css">
+<!--
+.style1 {font-size: 18px}
+-->
+</style>
+</head>
+
+<body>
+<div id="container">
+ <img src="images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 align="center">Game 21</h1>
+<div style ="clear:both;"></div>  
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="play_games.html">Play a Game</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+</div>
+<div id="content">
+  <table width = "85%" cellpadding="5" cellspacing="0" border = "0">
+  <tr><td><img src="images/wizard.jpg" width="120" height="168" /></td>
+  <td><img src="images/troll.jpg" width="120" height="168" /></td></tr>
+  <tr><td><span class="style1">My cards: </span></td>
+<td><span class="style1">The computer cards: </span></td></tr>
+  <tr><td id = "myCards" span class="style1">My cards go here</span></td>
+  <td id = "comCards" span class="style1">The computer cards are hidden</span></td></tr>
+  <tr><td colspan = 2><span class="style1">The winner is:</span></td></tr>
+ <tr><td colspan = 2 id="winner" align = "center" class="style1">&nbsp;</td></tr>
+<tr><td><span class="style1">My points: </span></td> 
+<td><span class="style1">Computer points:</span></td></tr>  
+<tr><td class="style1" id = "myPts">21</td> <td class="style1" id = "comPts">21</td></tr>
+<tr><td><input type="button" id="battle" value="Let the game21 begin!" onclick="winIt()"; /> </td>
+<td><input type="button" id="return" value="Return to battle instructions" onclick="location.href = 'greg_battle.html'"; /></td>
+</table>
+</div>
+<div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
+<a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+</div>
+</div>
+</body>
+</html>
